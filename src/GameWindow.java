@@ -88,7 +88,7 @@ public class GameWindow extends JFrame {
                         "Không biết cậu có nhớ mình đã từng là 1 chiến binh vĩ đại đến từ đế quốc Neflim cổ xưa hay chăng ?\"\n",
                 new Choice("yes", "E000010"),
                 new Choice("no", "E000005"),
-                new Choice("notAns","E000002")
+                new Choice("notAns", "E000002")
         );
         Story story3 = new Story(
                 "E000003",
@@ -112,7 +112,7 @@ public class GameWindow extends JFrame {
                         "Sức mạnh lớn luôn đi theo hiểm họa tương ứng. Tổng lãnh quỷ sai đã sớm để ý đến sức mạnh to lơn này từ trước đó rất lâu.\n" +
                         "và hắn đã đặt vào nó 1 điếm yếu chí mạng. Đó là lòng tham và sự đố kị.\"\n",
                 new Choice("next", "E000006"),
-                new Choice("notNext","E000005")
+                new Choice("notNext", "E000005")
         );
         Story story6 = new Story(
                 "E000006",
@@ -124,7 +124,7 @@ public class GameWindow extends JFrame {
                         "\n" +
                         "Chuyện của Noah là 1 câu truyện khác mà cậu có thể tìm hiểu sau.\"\n",
                 new Choice("next", "E000007"),
-                new Choice("notNext","E000006")
+                new Choice("notNext", "E000006")
         );
         Story story7 = new Story(
                 "E000007",
@@ -146,7 +146,7 @@ public class GameWindow extends JFrame {
                 new Choice("G", "E000008r"),
                 new Choice("H", "E000008r"),
                 new Choice("I", "E000008w"),
-                new Choice("notAns","E000008w")
+                new Choice("notAns", "E000008w")
         );
         Story story8w = new Story(
                 "E000008w",
@@ -168,7 +168,7 @@ public class GameWindow extends JFrame {
                 new Choice("G", "E000008r"),
                 new Choice("H", "E000008r"),
                 new Choice("I", "E000008w"),
-                new Choice("notAns","E000008w")
+                new Choice("notAns", "E000008w")
         );
         Story story8r = new Story(
                 "E000008r",
@@ -248,12 +248,11 @@ public class GameWindow extends JFrame {
                     } else if (choice.value.equalsIgnoreCase("other")) {
                         changeStory(choice.to);
                         break;
-                    }else if (choice.value.equalsIgnoreCase("notNext")) EventManager.pushUIMessageNewLine("wrong command! press 'Next'" );
-                    else if (choice.value.equalsIgnoreCase("notAns")) EventManager.pushUIMessageNewLine("wrong Answer" );
+                    } else if (choice.value.equalsIgnoreCase("notNext"))
+                        EventManager.pushUIMessageNewLine("wrong command! press 'Next'");
+                    else if (choice.value.equalsIgnoreCase("notAns")) EventManager.pushUIMessageNewLine("wrong Answer");
 
                 }
-
-
 
 
                 //---------------movement for player in map---------------
