@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02207789-1dca-4e41-8fe7-1f783d19a617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/events/event_arc_1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/novels/Time.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/GameWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/novels/Choice.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/novels/Choice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ci-textgame-begin/novels/Story.class" afterPath="$PROJECT_DIR$/out/production/ci-textgame-begin/novels/Story.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ci-textgame-begin.iml" afterPath="$PROJECT_DIR$/ci-textgame-begin.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/events/event_arc_1.json" afterPath="$PROJECT_DIR$/assets/events/event_arc_1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameWindow.java" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/novels/Choice.java" afterPath="$PROJECT_DIR$/src/novels/Choice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/novels/Story.java" afterPath="$PROJECT_DIR$/src/novels/Story.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +18,11 @@
       <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="182" column="52" lean-forward="false" selection-start-line="182" selection-start-column="52" selection-end-line="182" selection-end-column="52" />
+            <state relative-caret-position="-315">
+              <caret line="188" column="36" lean-forward="false" selection-start-line="188" selection-start-column="36" selection-end-line="188" selection-end-column="36" />
               <folding>
-                <element signature="e#10821#10975#0" expanded="true" />
-                <element signature="e#10974#10975#0" expanded="true" />
+                <element signature="e#11027#11181#0" expanded="true" />
+                <element signature="e#11180#11181#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +51,8 @@
       <file leaf-file-name="event_arc_1.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/events/event_arc_1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="103" column="3" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
+            <state relative-caret-position="798">
+              <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -155,8 +143,8 @@
         <option value="$PROJECT_DIR$/src/novels/Time.java" />
         <option value="$PROJECT_DIR$/assets/events/event_arc_0.json" />
         <option value="$PROJECT_DIR$/src/novels/Choice.java" />
-        <option value="$PROJECT_DIR$/assets/events/event_arc_1.json" />
         <option value="$PROJECT_DIR$/src/settings/Settings.java" />
+        <option value="$PROJECT_DIR$/assets/events/event_arc_1.json" />
         <option value="$PROJECT_DIR$/src/GameWindow.java" />
       </list>
     </option>
@@ -540,8 +528,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,6 +538,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -615,8 +604,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -625,6 +614,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -690,8 +680,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -700,6 +690,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -765,8 +756,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -821,8 +812,8 @@
         <state relative-caret-position="1827">
           <caret line="106" column="10" lean-forward="true" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,8 +860,8 @@
         <state relative-caret-position="510">
           <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -934,6 +925,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -994,19 +986,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/events/event_arc_1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="103" column="3" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
+        <state relative-caret-position="798">
+          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="182" column="52" lean-forward="false" selection-start-line="182" selection-start-column="52" selection-end-line="182" selection-end-column="52" />
+        <state relative-caret-position="-315">
+          <caret line="188" column="36" lean-forward="false" selection-start-line="188" selection-start-column="36" selection-end-line="188" selection-end-column="36" />
           <folding>
-            <element signature="e#10821#10975#0" expanded="true" />
-            <element signature="e#10974#10975#0" expanded="true" />
+            <element signature="e#11027#11181#0" expanded="true" />
+            <element signature="e#11180#11181#0" expanded="true" />
           </folding>
         </state>
       </provider>

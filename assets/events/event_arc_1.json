@@ -45,7 +45,7 @@
     "answers": [
       {
         "to" : "E000006",
-        "value" : "Forward"
+        "value" : "Go"
       },
       {
         "to" : "E000007",

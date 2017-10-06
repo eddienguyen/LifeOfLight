@@ -107,10 +107,9 @@ public class GameWindow extends JFrame {
                     changeStory("E000008");
                     EventManager.pushUIMessageNewLine("You DIE!");
                     System.exit(1);
-                } else if (playerY == 8 && playerY == 9){
+                } else if (playerY == 8 && playerY == 9) {
                     changeStory("E000007");
-                }
-                else {
+                } else {
                     location[x][y] = " .";
                 }
             }//width
@@ -171,39 +170,47 @@ public class GameWindow extends JFrame {
                         EventManager.pushUIMessage("next move ?");
                     } else if (command.equals("up")) {
                         if (gameOn == true) {
-                            if (playerY > 1) {
-                                EventManager.pushClearUI();
-                                EventManager.pushUIMessageNewLine("you moved up");
-                                playerY -= 1;
-                                loadMap();
-                            } else EventManager.pushUIMessageNewLine("You hit the wall");
+                            EventManager.pushClearUI();
+                            EventManager.pushUIMessageNewLine("you moved up");
+                            playerY--;
+                            if (playerY == 0) {
+                                EventManager.pushUIMessageNewLine("You hit the wall");
+                                playerY++;
+                            }
+                            loadMap();
                         } else EventManager.pushUIMessageNewLine("unable to move right now");
                     } else if (command.equals("down")) {
                         if (gameOn == true) {
-                            if (playerY < height - 2) {
-                                EventManager.pushClearUI();
-                                EventManager.pushUIMessageNewLine("you moved down");
-                                playerY += 1;
-                                loadMap();
-                            } else EventManager.pushUIMessage("You hit the wall");
+                            EventManager.pushClearUI();
+                            EventManager.pushUIMessageNewLine("you moved down");
+                            playerY++;
+                            if (playerY == height - 1) {
+                                EventManager.pushUIMessageNewLine("You hit the wall");
+                                playerY--;
+                            }
+                            loadMap();
                         } else EventManager.pushUIMessage("unable to move right now");
                     } else if (command.equals("left")) {
                         if (gameOn == true) {
-                            if (playerX > 1) {
-                                EventManager.pushClearUI();
-                                EventManager.pushUIMessageNewLine("you moved left");
-                                playerX -= 1;
-                                loadMap();
-                            } else EventManager.pushUIMessage("You hit the wall");
+                            EventManager.pushClearUI();
+                            EventManager.pushUIMessageNewLine("you moved left");
+                            playerX--;
+                            if (playerX == 0){
+                                EventManager.pushUIMessageNewLine("You hit the wall");
+                                playerX++;
+                            }
+                            loadMap();
                         } else EventManager.pushUIMessage("unable to move right now");
                     } else if (command.equals("right")) {
                         if (gameOn == true) {
-                            if (playerX < width - 2) {
-                                EventManager.pushClearUI();
-                                EventManager.pushUIMessageNewLine("you moved right");
-                                playerX += 1;
-                                loadMap();
-                            } else EventManager.pushUIMessage("You hit the wall");
+                            EventManager.pushClearUI();
+                            EventManager.pushUIMessageNewLine("you moved right");
+                            playerX ++;
+                            if (playerX == width - 1){
+                                EventManager.pushUIMessage("You hit the wall");
+                                playerX--;
+                            }
+                            loadMap();
                         } else EventManager.pushUIMessage("unable to move right now");
                     } else if (command.equals("help")) {
                         EventManager.pushUIMessageNewLine("type ';#0000FFstart;' to start the game");
