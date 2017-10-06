@@ -1,0 +1,107 @@
+[
+  {
+    "message": "Sáng tỉnh dậy, đầu óc choáng váng, cố gắng nhận ra mình đang ở đâu. Không gian thật im ắng.\nCậu cố rướn mình lên, cảnh giác nhìn xung quanh, tìm kiếm cái gì quen thuộc, chẳng có gì cả.\n Rõ ràng đây là một căn phòng xa lạ. 4 bức tường hoàn toàn bằng đá được chạm khắc công phu, bên trên là trần nhà hình vòm với chùm đèn bằng nến treo lơ lửng. Cảnh vật xung quanh làm Sáng có cảm giác như đang ở trong một tòa lâu đài. Mùi gỗ sồi được đốt cháy trong lò sưởi, quyện với mùi giấy trên tủ sách lớn dựng sau lưng.\n'TÔI LÀ AI ? ĐÂY LÀ ĐÂU?' ",
+    "time": {
+      "to" : "E000002",
+      "value" : "30s"
+    },
+    "ID": "E000001",
+    "type": "Timeout",
+    "answers": []
+  },
+
+  {
+    "message": "Một tay giữ đầu, cậu cố lê mình bước ra khỏi phòng. \nCánh cửa gỗ lớn mở ra, và cậu bước tới một hành lang trải dài bằng đá cẩm thạch. Trần nhà xây theo kiểu nhà thờ cao vút, tô điểm bằng những bức tranh giống thời Phục Hưng. Kính màu được lắp sặc sỡ trên tường. Dưới sảnh lớn, treo đầy đủ những vũ khí và những bộ áo giáp. Phía còn lại, là những chiếc tủ lớn đựng chai lọ, những cuộn giấy, sách bìa gỗ lấp kín.\n Đúng như những gì cậu nghĩ, đây là một tòa lâu đài cổ, thậm chí còn không phải là ở thời hiện tại nữa.\n 'Nhưng tại sao mình lại ở đây ? Và tại sao ở đây không một bóng người?'  ",
+    "time": {
+      "to" : "E000003",
+      "value" : "30s"
+    },
+    "ID": "E000002",
+    "type": "Timeout",
+    "answers": []
+  },
+
+  {
+    "message": "Khung cảnh lặng thinh khiến Sáng có cảm giác rờn rợn, cậu tìm đường ra ngoài nhanh chóng. Một cánh cửa lớn bằng gỗ sồi, nặng nề mở ra.\n Bước ra phía ngoài, cậu nhìn thấy một màn sương mù dày đặc, đến nỗi chẳng còn nhìn rõ mặt trời, chỉ thấy lờ mờ phía đằng xa đó là những đỉnh núi đan xen nhau. Cả vùng này trông có vẻ hoang vắng và lạnh lẽo. Có lẽ cậu đang ở trên sườn núi thì phải.\nCậu quay lại, cố nhìn rõ xung quanh: \nBên phải tòa nhà là một con đường mòn bằng đá lởm chởm. \nBên trái tòa nhà là một khu rừng, hàng dãy cây mọc cao quá đầu người. \n'Nên đi về hướng nào' - Sáng băn khoăn.  ",
+    "time": null,
+    "ID": "E000003",
+    "type": "Input",
+    "answers": [
+      {
+        "to" : "E000004",
+        "value" : "Left"
+      },
+      {
+        "to" : "E000005",
+        "value" : "Right"
+      }
+    ]
+  },
+  {
+    "message": "Sáng hối hả đi về phía khu rừng, có cảm giác bàn chân cậu lún vào vũng bùn. Sau cùng, cậu nhận ra mình đã lạc vào mê cung tối tăm. \n'Quay lại hay đi tiếp ?' ",
+    "time": null,
+    "ID": "E000004",
+    "type": "Input",
+    "answers": [
+      {
+        "to" : "E000006",
+        "value" : "Forward"
+      },
+      {
+        "to" : "E000007",
+        "value" : "Back"    //castle
+      }
+    ]
+  },
+  {
+    "message": "Sáng hối hả đi về phía đường mòn. Đến gần cuối, cậu phát hiện ra một cây cột bị chặt phân nửa, buộc với một sợi dây thừng đã mọc rêu.\nĐi thêm vài bước nữa, cậu giật mình nhìn lại, phía dưới là một vực thẳm sâu hun hút, đen kịt.\n'Chắc phải quay lại thôi, cây cầu này đã sụp đổ, không còn đường đi nữa.' ",
+    "time": null,
+    "ID": "E000005",
+    "type": "Input",
+    "answers": [
+      {
+        "to" : "E000007",
+        "value" : "Back"
+      },
+      {
+        "to" : "E000008",   //die
+        "value" : "other"
+      }
+    ]
+  },
+
+  {
+    "message": "Sáng quyết định đi vào dungeon. ",
+    "time": null,
+    "ID": "E000006",
+    "type": "Map",
+    "answers": []
+  },
+
+  {
+    "message": "Sáng hối hả chạy về phía lâu đài. \nBên phải lâu đài là một con đường mòn bằng đá lởm chởm. \nBên trái lâu đài là một khu rừng, hàng dãy cây mọc cao quá đầu người. \n'Nên đi về hướng nào bây giờ ?' - Sáng suy nghĩ...",
+    "time": null,
+    "ID": "E000007",
+    "type": "Input",
+    "answers": [
+      {
+        "to" : "E000004",
+        "value" : "Left"
+      },
+      {
+        "to" : "E000005",
+        "value" : "Right"
+      }
+    ]
+  },
+
+  {
+    "message": "Sáng quyết định đi 1 bước nữa. Và... \nChết ",
+    "time": null,
+    "ID": "E000008",
+    "type": "End",
+    "answers": []
+  }
+
+
+]

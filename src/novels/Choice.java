@@ -10,6 +10,7 @@ public class Choice {
     }
 
     public boolean match(String answer){
-        return answer.equalsIgnoreCase(value) /*|| answer.equalsIgnoreCase("other")*/;
+        return value.equalsIgnoreCase(answer);
+                //|| value.equalsIgnoreCase("other");
     }
 }
