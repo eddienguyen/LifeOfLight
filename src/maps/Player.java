@@ -24,11 +24,12 @@ public class Player {
     }
 
     public boolean hitEvent(Event event){
-        if ( (this.x == event.x) && (this.y == event.y) ) return true;
-        else return false;
+        return  ( (this.x == event.x) && (this.y == event.y) ) ;
     }
 
     public void setStr(int str) {
         Str += str;
     }
+
+
 }

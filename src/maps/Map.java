@@ -18,9 +18,11 @@ public class Map {
     Event event;
 
     ArrayList walls = new ArrayList();
-    ArrayList events = new ArrayList();
+    ArrayList<Event> events = new ArrayList();
     boolean hasKey = false;
 
+    int playerX = 2;
+    int playerY = 2;
 
     public Map(String mapContent) {
         mapContent = mapContent.replace("\r", "");
@@ -35,8 +37,6 @@ public class Map {
         height = lines.length;
         width = lines[0].length();
 
-        int playerX = 2;
-        int playerY = 2;
 
         // find player's location
         for (int y = 0; y < rows.size(); y++) {
@@ -65,9 +65,7 @@ public class Map {
                         if (cell.equalsIgnoreCase("/")) {
                             wall = new Wall(x, y);
                             walls.add(wall);
-                        }
-
-                        if (cell.equalsIgnoreCase("%")) {
+                        }else if (cell.equalsIgnoreCase("E")) {
                             event = new Event(x, y);
                             events.add(event);
                         }
@@ -93,6 +91,7 @@ public class Map {
             }
         }
         eventCollision();
+
     }
 
     public void playerDown() {
@@ -134,18 +133,21 @@ public class Map {
 
     //when there's an item collision:
     public void eventCollision() {
-        for (int i = 0; i < events.size(); i++) {
-            if (player.hitEvent((Event) events.get(i))) {
+        for (Event event : events) {
+            if (player.hitEvent(event)) {
+                events.remove(event);                           //doesn't work! Event is still there!
                 Random rnd = new Random();
                 int randomNum = rnd.nextInt(4);
                 if (randomNum <= 2) {
                     EventManager.pushUIMessageNewLine(String.format("you've just gained %s strengh ", randomNum * 10));
                     player.setStr(randomNum * 10);
-                    System.out.println(randomNum);
+                    EventManager.pushUIMessageNewLine("Strengh:" + player.Str);
+                    break;
                 } else {
                     EventManager.pushUIMessageNewLine(String.format("You've just lost %s strengh", randomNum * 5));
                     player.setStr(randomNum * 5);
                     System.out.println(randomNum);
+                    break;
                 }
             }
         }
