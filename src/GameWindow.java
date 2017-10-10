@@ -1,5 +1,6 @@
 
 import bases.GameObject;
+import bases.Utils;
 import bases.events.EventManager;
 import bases.inputs.CommandListener;
 import bases.inputs.InputManager;
@@ -8,6 +9,7 @@ import bases.uis.StatScreen;
 import bases.uis.TextScreen;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import maps.Map;
 import novels.Story;
 import novels.Choice;
 import settings.Settings;
@@ -37,14 +39,12 @@ public class GameWindow extends JFrame {
     private GameCanvas canvas;
 
     //map info
-    int playerX = 1;
-    int playerY = 1;
-    int trapX = 2;
-    int trapY = 5;
+
     int width = 10;                                     //mapWidth
     int height = 10;                                    //mapHeght
     String[][] location = new String[width][height];
-
+    int currentMapIndex = 0;
+    Map map;
     boolean gameOn = false;
     //end map info
 
@@ -95,37 +95,13 @@ public class GameWindow extends JFrame {
         }
     }
 
-    public void loadMap() {
-        for (int y = 0; y <= height - 1; y++) {
-            for (int x = 0; x <= width - 1; x++) {
-                if (0 == x || 0 == y || height - 1 == y || width - 1 == x) {
-                    location[x][y] = " #";
-                } else if (x == playerX && y == playerY) {
-                    location[x][y] = " @";
-                } else if (playerX == trapX && playerY == trapY) {
-                    EventManager.pushClearUI();
-                    changeStory("E000008");
-                    EventManager.pushUIMessageNewLine("You DIE!");
-                    System.exit(1);
-                } else if (playerY == 8 && playerY == 9) {
-                    changeStory("E000007");
-                } else {
-                    location[x][y] = " .";
-                }
-            }//width
-        }//height
-        location[1][0] = " s";                          //start
-        location[8][9] = " e";                          //end
-        String line;
-        //print Map:
-        for (int y = 0; y <= height - 1; y++) {
-            line = "";
-            for (int x = 0; x <= width - 1; x++) {
-                line += location[x][y];
-            }
-            EventManager.pushUIMessageNewLine(line);
-        }//end print map
-    }//loadMap
+    private void loadMap(int mapIndex) {
+        String url = String.format("assets/maps/map_lvl%s.txt", mapIndex);
+        String content = Utils.loadFileContent(url);
+        map = new Map(content);
+    }
+
+
 
 
     public GameWindow() {
@@ -157,60 +133,56 @@ public class GameWindow extends JFrame {
                     if (command.equalsIgnoreCase("next")) changeStory(currentStory.time.to);
                     else EventManager.pushUIMessageNewLine("#ff0099wrong command! press 'Next'");
                 } else if (currentStory.isType("nextArc")) {
+                    EventManager.pushClearUI();
                     currentArc++;
                     loadArc(currentArc);
                 } else if (currentStory.isType("Map")) {
-                    loadMap();
+                    if (map == null) {
+                        loadMap(0);
+                        map.pushUI();
+                    }
+
                     //---------------movement for player in map---------------
 
                     if (command.equals("start")) {
                         EventManager.pushClearUI();
                         gameOn = true;
-                        loadMap();
+                        map.pushUI();
                         EventManager.pushUIMessage("next move ?");
                     } else if (command.equals("up")) {
                         if (gameOn == true) {
                             EventManager.pushClearUI();
                             EventManager.pushUIMessageNewLine("you moved up");
-                            playerY--;
-                            if (playerY == 0) {
-                                EventManager.pushUIMessageNewLine("You hit the wall");
-                                playerY++;
-                            }
-                            loadMap();
+                            map.playerUp();
+                            map.pushUI();
                         } else EventManager.pushUIMessageNewLine("unable to move right now");
                     } else if (command.equals("down")) {
                         if (gameOn == true) {
                             EventManager.pushClearUI();
                             EventManager.pushUIMessageNewLine("you moved down");
-                            playerY++;
-                            if (playerY == height - 1) {
-                                EventManager.pushUIMessageNewLine("You hit the wall");
-                                playerY--;
-                            }
-                            loadMap();
+                            map.playerDown();
+
+//                            if(playerX == 8 && playerY ==9) {
+//                                EventManager.pushClearUI();
+//                                EventManager.pushUIMessageNewLine("You've found the way out");
+//                                changeStory("E000007");
+//                            }
+
+                            map.pushUI();
                         } else EventManager.pushUIMessage("unable to move right now");
                     } else if (command.equals("left")) {
                         if (gameOn == true) {
                             EventManager.pushClearUI();
                             EventManager.pushUIMessageNewLine("you moved left");
-                            playerX--;
-                            if (playerX == 0){
-                                EventManager.pushUIMessageNewLine("You hit the wall");
-                                playerX++;
-                            }
-                            loadMap();
+                            map.playerLeft();
+                            map.pushUI();
                         } else EventManager.pushUIMessage("unable to move right now");
                     } else if (command.equals("right")) {
                         if (gameOn == true) {
                             EventManager.pushClearUI();
                             EventManager.pushUIMessageNewLine("you moved right");
-                            playerX ++;
-                            if (playerX == width - 1){
-                                EventManager.pushUIMessage("You hit the wall");
-                                playerX--;
-                            }
-                            loadMap();
+                            map.playerRight();
+                            map.pushUI();
                         } else EventManager.pushUIMessage("unable to move right now");
                     } else if (command.equals("help")) {
                         EventManager.pushUIMessageNewLine("type ';#0000FFstart;' to start the game");
@@ -218,6 +190,7 @@ public class GameWindow extends JFrame {
                     } else {
                         EventManager.pushHelpMessage();
                     }
+
 
                     //---------------end movement for player in map---------------
                 }

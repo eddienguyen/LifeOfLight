@@ -22,7 +22,7 @@
   },
 
   {
-    "message": "Khung cảnh lặng thinh khiến Sáng có cảm giác rờn rợn, cậu tìm đường ra ngoài nhanh chóng. Một cánh cửa lớn bằng gỗ sồi, nặng nề mở ra.\n Bước ra phía ngoài, cậu nhìn thấy một màn sương mù dày đặc, đến nỗi chẳng còn nhìn rõ mặt trời, chỉ thấy lờ mờ phía đằng xa đó là những đỉnh núi đan xen nhau. Cả vùng này trông có vẻ hoang vắng và lạnh lẽo. Có lẽ cậu đang ở trên sườn núi thì phải.\nCậu quay lại, cố nhìn rõ xung quanh: \nBên phải tòa nhà là một con đường mòn bằng đá lởm chởm. \nBên trái tòa nhà là một khu rừng, hàng dãy cây mọc cao quá đầu người. \n'Nên đi về hướng nào' - Sáng băn khoăn.  ",
+    "message": "Khung cảnh lặng thinh khiến Sáng có cảm giác rờn rợn, cậu tìm đường ra ngoài nhanh chóng. Một cánh cửa lớn bằng gỗ sồi, nặng nề mở ra.\n Bước ra phía ngoài, cậu nhìn thấy một màn sương mù dày đặc, đến nỗi chẳng còn nhìn rõ mặt trời, chỉ thấy lờ mờ phía đằng xa đó là những đỉnh núi đan xen nhau. Cả vùng này trông có vẻ hoang vắng và lạnh lẽo. Có lẽ cậu đang ở trên sườn núi thì phải.\nCậu quay lại, cố nhìn rõ xung quanh: \nBên phải tòa nhà là một con đường mòn bằng đá lởm chởm. \nBên trái tòa nhà là một khu rừng, hàng dãy cây mọc cao quá đầu người. \n'Nên đi về hướng nào? ;#0000FFLeft; or ;#0000FFRight;?' - Sáng băn khoăn.  ",
     "time": null,
     "ID": "E000003",
     "type": "Input",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "message": "Sáng hối hả đi về phía khu rừng, có cảm giác bàn chân cậu lún vào vũng bùn. Sau cùng, cậu nhận ra mình đã lạc vào mê cung tối tăm. \n'Quay lại hay đi tiếp ?' ",
+    "message": "Sáng hối hả đi về phía khu rừng, có cảm giác bàn chân cậu lún vào vũng bùn. Sau cùng, cậu nhận ra mình đã lạc vào mê cung tối tăm. \n'Quay lại hay đi tiếp ?;#0000FFGo; or ;#0000FFBack; ?' ",
     "time": null,
     "ID": "E000004",
     "type": "Input",
@@ -79,7 +79,7 @@
   },
 
   {
-    "message": "Sáng hối hả chạy về phía lâu đài. \nBên phải lâu đài là một con đường mòn bằng đá lởm chởm. \nBên trái lâu đài là một khu rừng, hàng dãy cây mọc cao quá đầu người. \n'Nên đi về hướng nào bây giờ ?' - Sáng suy nghĩ...",
+    "message": "Sáng hối hả chạy về phía lâu đài. \nBên phải lâu đài là một con đường mòn bằng đá lởm chởm. \nBên trái lâu đài là một khu rừng, hàng dãy cây mọc cao quá đầu người. \n'Nên đi về hướng nào bây giờ ? ;#0000FFLeft; or ;#0000FFRight; ?' - Sáng suy nghĩ...",
     "time": null,
     "ID": "E000007",
     "type": "Input",
